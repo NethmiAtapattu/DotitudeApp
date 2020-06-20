@@ -1,0 +1,256 @@
+mat-sidenav-container {
+  background-color: rgb(255, 255, 255);
+}
+#toolbarMenu {
+  cursor: pointer;
+  margin-right: 20px;
+  color: #eee;
+  margin-bottom: 1%;
+}
+
+#mainToolbar .toolbar-icon {
+  cursor: pointer;
+  color: #eee;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.toolbar {
+  background-color: rgba(28, 28, 29, 0.7);
+  color: #ececec;
+}
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 0.5%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+#sidenavContainer {
+  margin-top: 0px;
+}
+mat-sidenav {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+}
+mat-sidenav :hover {
+  color: #f47e47;
+  cursor: pointer;
+}
+
+/* 
+  #sidenav {
+    width: 240px;
+  }
+  
+  #sidenav.menu-close {
+    width: 60px;
+  }
+  
+  #sidenav.menu-open {
+    width: 200px;
+  }
+  
+  #sidenav .menu-item {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  #sidenav .menu-item:hover {
+    background: rgb(209, 11, 11);
+  }
+  #sidenav .menu-item mat-icon {
+    margin-right: 10px;
+    margin-left: -5px;
+  } 
+  
+  .dash-list h3 {
+    padding: 12px;
+  }
+  
+  mat-sidenav-content {
+    padding: -55px;
+  } */
+
+/* .grid {
+    border: 2px solid rgb(97, 94, 94);
+    height: 10%;
+  } */
+mat-nav-list {
+  margin-bottom: 10%;
+  padding-bottom: 70%;
+}
+
+mat-icon {
+  color: #ececec;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  height: 250px;
+  border: 2px solid rgb(254, 243, 238);
+  background-color: #ffffff;
+  margin-top: 2%;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-align: left;
+}
+.card2 {
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  height: 260px;
+  border: 2px solid rgb(245, 245, 245);
+  background-color: #ffffff;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-align: left;
+}
+.card4 {
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  height: 115px;
+  border: 2px solid rgb(245, 245, 245);
+  background-color: #ffffff;
+  margin-left: -10px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.card5 {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  height: 280px;
+  margin-left: 25px;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  text-align: left;
+}
+/* 
+.card6 {
+  position: relative;
+  display: inline-block;
+  width: 1000px;
+  height: 220px;
+  border: 2px solid rgb(229, 242, 255);
+  background-color: #ffffff;
+  margin-top: 2%;
+  margin-left: 20px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-align: left;
+} */
+mat-card-subtitle {
+  font-size: 50px;
+  color: #f47e47;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 80px;
+  display: flex;
+}
+
+.flex-start {
+  align-self: flex-start;
+}
+.flex-item {
+  /* background: tomato; */
+  background: rgb(255, 255, 255);
+  width: 250px;
+  color: white;
+  /* text-align: center; */
+}
+.flex-item2 {
+  background: rgb(255, 255, 255);
+  width: 750px;
+  color: rgba(28, 28, 29, 0.9);
+}
+
+.sideIcon {
+  margin-top: 5%;
+  margin-left: 10%;
+  font-size: 70px;
+  color: rgb(122, 122, 122);
+}
+.title2 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: -10%;
+}
+.title3 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 1%;
+}
+.progress-bar {
+  margin: 0 10px;
+}
+
+.happy {
+  margin-top: 1%;
+  margin-left: 28%;
+  font-size: 150px;
+  color: rgb(122, 122, 122);
+  margin-bottom: -1%;
+}
+
+#chart {
+  display: block;
+  width: 100%;
+  height: 99%;
+  margin-top: 3%;
+}
+
+#chart2 {
+  display: block;
+  width: 100%;
+  height: 40%;
+  margin-bottom: 10%;
+  margin-left: 1%;
+}
+#chart3 {
+  display: block;
+  width: 100%;
+  height: 80%;
+  margin-bottom: 10%;
+  margin-left: 1%;
+}
+#legend {
+  font-size: 15px;
+  margin-left: 60px;
+  margin-top: 1%;
+}
+
+.bottom-logo {
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 100%;
+}

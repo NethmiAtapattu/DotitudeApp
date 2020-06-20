@@ -1,0 +1,74 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span class="menu"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-nav-list>
+      <nav class="main-nav" role="navigation">
+        <ul class="unstyled list-hover-slide">
+          <li>
+            <a routerLink="../dashboard"> Dashboard</a>
+          </li>
+          <li>
+            <a>Statistics</a>
+          </li>
+          <li>
+            <a routerLink="../interns">Intern Details</a>
+          </li>
+          <li>
+            <a>Settings</a>
+          </li>
+          <li>
+            <a>Favorites</a>
+          </li>
+          <li>
+            <a>Logout</a>
+          </li>
+        </ul>
+        <span class="logo">
+          <img
+            src="https://www.99xtechnology.com/wp-content/themes/99xtechnology/images/logo.png"
+            alt="99xtechnology"
+        /></span>
+      </nav>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Dotitude</span>
+
+      <span class="toolbar-spacer"></span>
+      <mat-icon
+        class="toolbar-icon"
+        matBadge="8"
+        matBadgePosition="after"
+        matBadgeColor="warn"
+        matTooltip="Notifications"
+        matTooltipPosition="below"
+        matTooltipHideDelay="10"
+        >notifications</mat-icon
+      >
+    </mat-toolbar>
+
+    <!-- <app-new-intern></app-new-intern> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

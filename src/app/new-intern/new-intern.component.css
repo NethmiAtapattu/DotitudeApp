@@ -1,0 +1,91 @@
+mat-icon {
+  color: #000000;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 10px;
+  border: 1.5px solid #f47e47;
+  overflow: hidden;
+  box-shadow: 0 4px 10px 4px rgba(244, 126, 71, 0);
+}
+label {
+  padding: 0.75em 5em;
+  top: 5px;
+  line-height: normal;
+  display: block;
+  color: rgba(14, 13, 13, 0.788);
+  padding-top: 0;
+  padding-left: 0;
+  letter-spacing: 0.025em;
+  font-size: 1.125em;
+  line-height: 1.25;
+  position: relative;
+}
+.label1 {
+  font-size: 1em;
+}
+input {
+  color: #000000;
+  margin-bottom: 5px;
+}
+.form-control1 {
+  width: 25%;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: rgb(10, 10, 10);
+  position: relative;
+  padding: 0.75em 1em;
+  line-height: normal;
+}
+
+/* .required .form .label:after,
+.form .required .label:after {
+  content: " *";
+  color: #e8474c;
+  font-weight: normal;
+  font-size: 0.75em;
+  vertical-align: top;
+} */
+
+/* .bottom-logo {
+  background-color: rgba(173, 93, 93, 0.4);
+  text-align: center;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  border: 2px solid rgb(254, 243, 238);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  margin-top: 2%;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: left;
+} */
+
+.btn-primary {
+  width: 150px;
+  height: 40px;
+  background: #f47e47;
+  border: 1px solid #f47e47;
+  cursor: pointer;
+  border-radius: 4px;
+  color: rgb(245, 240, 240);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  color: #5a5353;
+  border: 3px solid #f47e47;
+}

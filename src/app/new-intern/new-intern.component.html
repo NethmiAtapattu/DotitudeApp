@@ -1,0 +1,303 @@
+<mat-card>
+  <div class="container-fluid">
+    <h2>Intern Enrollment Form</h2>
+
+    <form
+      #internForm="ngForm"
+      *ngIf="!submitted"
+      (ngSubmit)="onSubmit()"
+      novalidate
+    >
+      <div class="form-group">
+        <label>Personal Details</label>
+        <div class="form-group row">
+          <div class="col-sm-4">
+            <input
+              type="text"
+              #fname="ngModel"
+              required
+              class="form-control"
+              [class.is-invalid]="fname.invalid && fname.touched"
+              name="fname"
+              [(ngModel)]="internModel.fname"
+              placeholder="First Name"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="fname.valid || fname.untouched"
+            >
+              First Name is required
+            </small>
+          </div>
+
+          <div class="col-sm-4">
+            <input
+              type="text"
+              #sname="ngModel"
+              class="form-control"
+              name="sname"
+              [(ngModel)]="internModel.sname"
+              placeholder="Middle Name(s)"
+            />
+            <!-- <small>
+              If any
+            </small> -->
+          </div>
+
+          <div class="col-sm-4">
+            <input
+              type="text"
+              #lname="ngModel"
+              required
+              class="form-control"
+              [class.is-invalid]="lname.invalid && lname.touched"
+              name="lname"
+              [(ngModel)]="internModel.lname"
+              placeholder="Last Name"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="lname.valid || lname.untouched"
+              >Last Name is required</small
+            >
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <input
+              type="text"
+              #university="ngModel"
+              required
+              class="form-control"
+              [class.is-invalid]="university.invalid && university.touched"
+              name="university"
+              [(ngModel)]="internModel.university"
+              placeholder="University"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="university.valid || university.untouched"
+              >University is required</small
+            >
+          </div>
+          <div class="col-sm-6">
+            <select
+              class="custom-select"
+              #gender="ngModel"
+              required
+              [class.is-invalid]="gender.invalid && gender.touched"
+              name="gender"
+              [(ngModel)]="internModel.gender"
+            >
+              <option value="">Gender</option>
+              <option *ngFor="let gender of genders">{{ gender }}</option>
+            </select>
+            <small
+              class="text-danger"
+              [class.d-none]="gender.valid || gender.untouched"
+              >Gender is required</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Contact Details</label>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <input
+              type="email"
+              #email="ngModel"
+              required
+              class="form-control"
+              name="email"
+              [class.is-invalid]="email.invalid && email.touched"
+              [(ngModel)]="internModel.email"
+              placeholder="Email (intern@example.com)"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="email.valid || email.untouched"
+              >Email is required</small
+            >
+          </div>
+          <div class="col-sm-6">
+            <input
+              type="tel"
+              #phone="ngModel"
+              required
+              pattern="^\d{10}$"
+              class="form-control"
+              [class.is-invalid]="phone.invalid && phone.touched"
+              name="phone"
+              [(ngModel)]="internModel.phone"
+              placeholder="Contact Number"
+            />
+            <div *ngIf="phone.errors && (phone.valid || phone.touched)">
+              <small class="text-danger" *ngIf="phone.errors.required"
+                >Phone number is required</small
+              >
+              <small class="text-danger" *ngIf="phone.errors.pattern"
+                >Phone number must be 10 digits</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input
+              type="text"
+              #address="ngModel"
+              required
+              class="form-control"
+              [class.is-invalid]="address.invalid && address.touched"
+              name="address"
+              [(ngModel)]="internModel.address"
+              placeholder="Current Address"
+            />
+            <small
+              class="text-danger"
+              [class.d-none]="address.valid || address.untouched"
+              >Address is required</small
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Organization Details</label>
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <select
+              class="custom-select"
+              name="position"
+              [(ngModel)]="internModel.position"
+              required
+              #position="ngModel"
+              [class.is-invalid]="position.invalid && position.touched"
+            >
+              <option value="">Position</option>
+              <option *ngFor="let position of positions">{{ position }}</option>
+            </select>
+            <small
+              class="text-danger"
+              [class.d-none]="position.valid || position.untouched"
+            >
+              Select a job role
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-4">
+            <label class="label1">Internship Duration</label>
+          </div>
+          <div class="col-sm-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="duration"
+              value="three"
+            />
+            <label class="label1">
+              3 months
+            </label>
+          </div>
+          <div class="col-sm-3">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="duration"
+              value="six"
+            />
+            <label class="label1">
+              6 months
+            </label>
+          </div>
+          <div class="col-sm-2">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="duration"
+              value="other"
+            />
+            <label class="label1">
+              Other
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <input
+              #startdate="ngModel"
+              type="date"
+              class="form-control"
+              name="startdate"
+              [(ngModel)]="internModel.startdate"
+            />
+          </div>
+          <div class="col-sm-6">
+            <input
+              #endtdate="ngModel"
+              type="date"
+              class="form-control"
+              name="enddate"
+              [(ngModel)]="internModel.enddate"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <select
+              class="custom-select"
+              name="project"
+              [(ngModel)]="internModel.project"
+              required
+              #project="ngModel"
+              [class.is-invalid]="project.invalid && project.touched"
+            >
+              <option value="">Project Allocated</option>
+              <option *ngFor="let project of projects">{{ project }}</option>
+            </select>
+            <small
+              class="text-danger"
+              [class.d-none]="project.valid || project.untouched"
+            >
+              Select a project
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4">
+          <button
+            class="btn btn-primary"
+            [disabled]="internForm.form.invalid"
+            type="submit"
+          >
+            Add Intern
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- <div class="alert alert-danger" *ngIf="errorMsg">
+      {{ errorMsg }}
+    </div> -->
+  </div>
+</mat-card>
+
+<!-- <section class="bottom-logo">
+  <div style="font-family: Comic Sans, Comic Sans MS, cursive;">
+    Connecting dots with care
+    <mat-icon style="color: black; font-size: 20px;">
+      hdr_strong
+    </mat-icon>
+  </div>
+</section> -->
+
+<router-outlet></router-outlet>

@@ -1,0 +1,111 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title
+      ><a routerLink="../interns">Current Interns</a></mat-card-title
+    >
+    <mat-card-subtitle>{{ internNum }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div id="chart2">
+      <canvas id="lineChart"> </canvas>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>Dotitude Audience</mat-card-title>
+    <mat-card-subtitle>{{ audienceNum }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div id="chart2">
+      <canvas id="scatterChart"> </canvas>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>Internship 4.0 Evaluation</mat-card-title>
+  </mat-card-header>
+  <mat-card-content
+    ><div id="chart3">
+      <canvas id="horizontalBarChart"> </canvas>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card5">
+  <mat-card-content>
+    <mat-card class="card4">
+      <mat-card-content>
+        <ul class="flex-container">
+          <li class="flex-item flex-start">
+            <mat-icon class="sideIcon">description</mat-icon>
+          </li>
+          <li class="flex-item2 flex-start">
+            <p class="title3">CVs to Schedule Interviews</p>
+            <p class="title2">{{ cvNum }}</p>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card4">
+      <mat-card-content>
+        <ul class="flex-container">
+          <li class="flex-item flex-start">
+            <mat-icon class="sideIcon">schedule</mat-icon>
+          </li>
+          <li class="flex-item2 flex-start">
+            <p class="title3">Scheduled Interviews</p>
+            <p class="title2">{{ interviewNum }}</p>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card2">
+  <mat-card-header>
+    <mat-card-title>Internship Happy Index</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-icon class="happy">
+      sentiment_satisfied_alt
+    </mat-icon>
+    <p style="margin-top: -3%; text-align: center; color: rgb(26, 24, 24);">
+      Exceeding Expectations
+    </p>
+    <!-- <mat-progress-bar mode="determinate" [appProgressBarColor]="color"
+        class="progress-bar" [value]="value"></mat-progress-bar> -->
+    <mat-progress-bar
+      mode="determinate"
+      value="70"
+      class="style1"
+    ></mat-progress-bar>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="card2">
+  <mat-card-content>
+    <div id="chart">
+      <canvas id="barChart"> </canvas>
+    </div>
+    <p id="legend">Current University Distribution</p>
+  </mat-card-content>
+</mat-card>
+
+<!-- <mat-card class="card2">
+      <mat-card-content> </mat-card-content>
+    </mat-card> -->
+
+<!-- <section class="bottom-logo">
+  <div style="font-family: Comic Sans, Comic Sans MS, cursive;">
+    Connecting dots with care
+    <mat-icon style="color: black; font-size: 20px;">
+      hdr_strong
+    </mat-icon>
+  </div>
+</section> -->
